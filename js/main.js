@@ -55,28 +55,28 @@ window.onload = function() {
     R3 = new createjs.DOMElement($( "input[name=Certa]" )[ 2 ]);
     R4 = new createjs.DOMElement($( "input[name=Certa]" )[ 3 ]);
     R5 = new createjs.DOMElement($( "input[name=Certa]" )[ 4 ]);
-    Pergunta.x = 250;
-    RespostaA.x = 300;
-    RespostaB.x = 300;
-    RespostaC.x = 300;
-    RespostaD.x = 300;
-    RespostaE.x = 300;
-    Pergunta.y = 200;
-    RespostaA.y = 240;
-    RespostaB.y = 270;
-    RespostaC.y = 300;
-    RespostaD.y = 330;
-    RespostaE.y = 360;
-    R1.x = 260;
-    R2.x = 260;
-    R3.x = 260;
-    R4.x = 260;
-    R5.x = 260;
-    R1.y = 240;
-    R2.y = 270;
-    R3.y = 300;
-    R4.y = 330;
-    R5.y = 360;
+    Pergunta.x = 250 + s.canvas.offsetLeft;
+    RespostaA.x = 300 + s.canvas.offsetLeft;
+    RespostaB.x = 300 + s.canvas.offsetLeft;
+    RespostaC.x = 300 + s.canvas.offsetLeft;
+    RespostaD.x = 300 + s.canvas.offsetLeft;
+    RespostaE.x = 300 + s.canvas.offsetLeft;
+    Pergunta.y = 200 + s.canvas.offsetTop;
+    RespostaA.y = 240 + s.canvas.offsetTop;
+    RespostaB.y = 270 + s.canvas.offsetTop;
+    RespostaC.y = 300 + s.canvas.offsetTop;
+    RespostaD.y = 330 + s.canvas.offsetTop;
+    RespostaE.y = 360 + s.canvas.offsetTop;
+    R1.x = 260 + s.canvas.offsetLeft;
+    R2.x = 260 + s.canvas.offsetLeft;
+    R3.x = 260 + s.canvas.offsetLeft;
+    R4.x = 260 + s.canvas.offsetLeft;
+    R5.x = 260 + s.canvas.offsetLeft;
+    R1.y = 240 + s.canvas.offsetTop;
+    R2.y = 270 + s.canvas.offsetTop;
+    R3.y = 300 + s.canvas.offsetTop;
+    R4.y = 330 + s.canvas.offsetTop;
+    R5.y = 360 + s.canvas.offsetTop;
 	$('body').keydown(pkm);
 }
 //Objeto da pergunta
@@ -262,7 +262,7 @@ function btEditarAdd(){
 //Botão de voltar
 function btVoltarAdd(){
     btvoltar = new createjs.Bitmap("sprites/back.png");
-    btvoltar.x = 150;
+    btvoltar.x = 140;
     btvoltar.y = 400;
     s.addChild(btvoltar);
 }
@@ -289,7 +289,7 @@ function btAdicionarAdd(){
     var btadicionar = new createjs.Bitmap("sprites/adicionar.png");
     btadicionar.addEventListener("click", PaginaADD);
     btadicionar.x = 250;
-    btadicionar.y = 300;
+    btadicionar.y = 250;
     s.addChild(btadicionar);
 }
 //Botão de zerar
@@ -315,13 +315,17 @@ function PaginaADD(){
     s.addChild(R3);
     s.addChild(R4);
     s.addChild(R5);
+    btSaveAdd();
+    btVoltarAdd();
+    btvoltar.addEventListener("click", PaginaE);
+}
+//Botão de adicionar pergunta
+function btSaveAdd(){
     var btADD = new createjs.Bitmap("sprites/ADD.png");
     btADD.addEventListener("click", Save);
     btADD.x = 300;
-    btADD.y = 350;
+    btADD.y = 410;
     s.addChild(btADD);
-    btVoltarAdd();
-    btvoltar.addEventListener("click", PaginaE);
 }
 //Aqui eu chamo a função.
 index();
