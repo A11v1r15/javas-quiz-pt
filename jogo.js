@@ -1,4 +1,4 @@
-﻿Abra no Firefox, aperte "esc" algumas vezes e copie do console o ultimo json gerado
+//﻿Abra no Firefox, aperte "esc" algumas vezes e copie do console o ultimo json gerado
 
 
 var s = new createjs.Stage("can");
