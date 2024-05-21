@@ -1,6 +1,5 @@
 ﻿//Abra no Firefox, aperte "esc" algumas vezes e copie do console o ultimo json gerado
 
-
 var s = new createjs.Stage("can");
 var fundo = new createjs.Bitmap("sprites/bg.png")
 fundo.sourceRect = new createjs.Rectangle(0, 0, 800, 600);
@@ -38,7 +37,6 @@ function geraBG(){
     s.removeAllChildren();
     s.addChild(fundo);
 }
-
 //Pega as perguntas.
 window.onload = function() {
 	if (localStorage.getItem('perguntas') === null) {
@@ -81,19 +79,16 @@ window.onload = function() {
     R5.y = 360;
 	$('body').keydown(pkm);
 }
-
-  //Objeto da pergunta
-  function Answer() {
-  	this.P = $( "input" )[ 0 ].value;
-  	this.RA = $( "input" )[ 1 ].value;
-  	this.RB = $( "input" )[ 2 ].value;
-  	this.RC = $( "input" )[ 3 ].value;
-  	this.RD = $( "input" )[ 4 ].value;
-  	this.RE = $( "input" )[ 5 ].value;
-  	this.C = $( "input[name=Certa]:checked" ).val();
-  }
-
-
+//Objeto da pergunta
+function Answer() {
+this.P = $( "input" )[ 0 ].value;
+this.RA = $( "input" )[ 1 ].value;
+this.RB = $( "input" )[ 2 ].value;
+this.RC = $( "input" )[ 3 ].value;
+this.RD = $( "input" )[ 4 ].value;
+this.RE = $( "input" )[ 5 ].value;
+this.C = $( "input[name=Certa]:checked" ).val();
+}
   //Função de adicionar a pergunta
   function Save() {
   	if($( "input" )[ 0 ].value != "" && $( "input" )[ 1 ].value != "" && $( "input" )[ 2 ].value != "" && $( "input" )[ 3 ].value != "" && $( "input" )[ 4 ].value != "" && $( "input" )[ 5 ].value != "") {
@@ -108,7 +103,6 @@ window.onload = function() {
 	  	$( "input" )[ 5 ].value = "";
 	}
   }
-  
   //Apaga as perguntas
   function Wipe() {
 	Perguntas = [];
@@ -118,7 +112,6 @@ window.onload = function() {
     zerousim.x=220;
     zerousim.y=450;
   }
-  
   //Escreve as perguntas na tela
   function Write() {
   	if (Perguntas[Pindex] !== undefined) {
@@ -196,7 +189,6 @@ window.onload = function() {
         btAdicionarAdd();
       }
   }
-
 //Checa se errou ou acertou.
   function Check (e) {
   	 if (Perguntas[Pindex].C == e.target.R) {
@@ -242,14 +234,12 @@ window.onload = function() {
   	 	Write();
   	 }
   }
-  
 //Tela 1, com os dois botões.
 function index(){
     geraBG();
     btJogarAdd();
     btEditarAdd();
 }
-
 //Botão de jogar
 function btJogarAdd(){
     var btjogar = new createjs.Bitmap("sprites/jogar.png");
@@ -261,7 +251,6 @@ function btJogarAdd(){
     btjogar.y = 250;
     s.addChild(btjogar);
 }
-
 //Botão de editar
 function btEditarAdd(){
     var bteditar = new createjs.Bitmap("sprites/editar.png");
@@ -270,7 +259,6 @@ function btEditarAdd(){
     bteditar.y = 350;
     s.addChild(bteditar);
 }
-
 //Botão de voltar
 function btVoltarAdd(){
     btvoltar = new createjs.Bitmap("sprites/back.png");
@@ -278,7 +266,6 @@ function btVoltarAdd(){
     btvoltar.y = 400;
     s.addChild(btvoltar);
 }
-
 //Página de perguntas
 function PaginaP(){
     geraBG();
@@ -287,7 +274,6 @@ function PaginaP(){
     btVoltarAdd();
     btvoltar.addEventListener("click", index);
 }
-
 //Página de edição
 function PaginaE(){
     hideInputs();
@@ -298,7 +284,6 @@ function PaginaE(){
     btVoltarAdd();
     btvoltar.addEventListener("click", index);
 }
-
 //Botão de adicionar
 function btAdicionarAdd(){
     var btadicionar = new createjs.Bitmap("sprites/adicionar.png");
@@ -315,7 +300,6 @@ function btZerarAdd(){
     btzerar.y = 350;
     s.addChild(btzerar);
 }
-
 //Página de adição
 function PaginaADD(){
     geraBG();
@@ -339,16 +323,13 @@ function PaginaADD(){
     btVoltarAdd();
     btvoltar.addEventListener("click", PaginaE);
 }
-
 //Aqui eu chamo a função.
 index();
-
 //Uso um ticker pro update.
 createjs.Ticker.on("tick",tk);
 function tk() {
     s.update();
 }
-
 hideInputs();
 //Esconde os input
 function hideInputs(){
@@ -364,7 +345,6 @@ function hideInputs(){
 	  	$( "input" )[ 9 ].style.visibility = 'hidden';
 	  	$( "input" )[10 ].style.visibility = 'hidden';
 }
-
 //Embaralha a ordem das perguntas
 function shuffleArray(){
     var aleat;
@@ -377,7 +357,6 @@ function shuffleArray(){
             Perguntas[aleat] = aux;
         }
 }
-
 //Easter Egg
 function pkm(e) {
 	if(e.keyCode == 27){
