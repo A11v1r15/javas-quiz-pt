@@ -162,7 +162,7 @@ this.C = $( "input[name=Certa]:checked" ).val();
 	    s.addChild(rect4);
         rect4.x = 190;
         rect4.y = 370;
-	  	tt = new createjs.Text(Perguntas[Pindex].RC, "20px Impact, Charcoal, sans-serif", "#000000");
+	  	tt = new createjs.Text(Perguntas[Pindex].RD, "20px Impact, Charcoal, sans-serif", "#000000");
 		s.addChild(tt);
 		tt.x = 200;
 		tt.y = 380;
@@ -174,7 +174,7 @@ this.C = $( "input[name=Certa]:checked" ).val();
 	    s.addChild(rect5);
         rect5.x = 190;
         rect5.y = 400;
-	  	ts = new createjs.Text(Perguntas[Pindex].RC, "20px Impact, Charcoal, sans-serif", "#000000");
+	  	ts = new createjs.Text(Perguntas[Pindex].RE, "20px Impact, Charcoal, sans-serif", "#000000");
 		s.addChild(ts);
 		ts.x = 200;
 		ts.y = 410;
@@ -363,10 +363,10 @@ function pkm(e) {
 		$('#content').load("Pokemon.html");
 		var c = Math.floor(Math.random() * 720 + 3);
 		$( "input" )[ 0 ].value = $( "#content" ).children()[c].childNodes[1].innerHTML;
-		switch (Math.floor(Math.random() * 3)){
+		switch (Math.floor(Math.random() * 5)){
 			case 0:
 				$( "input" )[ 6 ].checked = true;
-				$( "input" )[ 1 ].value = $( "#content" ).children()[c].nodeName + " ←";
+				$( "input" )[ 1 ].value = $( "#content" ).children()[c].nodeName;
 				$( "input" )[ 2 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 3 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 4 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
@@ -375,7 +375,7 @@ function pkm(e) {
 			case 1:
 				$( "input" )[ 7 ].checked = true;
 				$( "input" )[ 1 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$( "input" )[ 2 ].value = $( "#content" ).children()[c].nodeName + " ←";
+				$( "input" )[ 2 ].value = $( "#content" ).children()[c].nodeName;
 				$( "input" )[ 3 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 4 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 5 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
@@ -384,7 +384,7 @@ function pkm(e) {
 				$( "input" )[ 8 ].checked = true;
 				$( "input" )[ 1 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 2 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$( "input" )[ 3 ].value = $( "#content" ).children()[c].nodeName + " ←";
+				$( "input" )[ 3 ].value = $( "#content" ).children()[c].nodeName;
 				$( "input" )[ 4 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 5 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 			break;
@@ -393,7 +393,7 @@ function pkm(e) {
 				$( "input" )[ 1 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 2 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 3 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$( "input" )[ 4 ].value = $( "#content" ).children()[c].nodeName + " ←";
+				$( "input" )[ 4 ].value = $( "#content" ).children()[c].nodeName;
 				$( "input" )[ 5 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 			break;
 			case 4:
@@ -402,7 +402,7 @@ function pkm(e) {
 				$( "input" )[ 2 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 3 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
 				$( "input" )[ 4 ].value = $( "#content" ).children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$( "input" )[ 5 ].value = $( "#content" ).children()[c].nodeName + " ←";
+				$( "input" )[ 5 ].value = $( "#content" ).children()[c].nodeName;
 			break;
 		}
 		Save()
