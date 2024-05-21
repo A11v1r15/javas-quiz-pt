@@ -93,7 +93,7 @@ this.C = $( "input[name=Certa]:checked" ).val();
   function Save() {
   	if($( "input" )[ 0 ].value != "" && $( "input" )[ 1 ].value != "" && $( "input" )[ 2 ].value != "" && $( "input" )[ 3 ].value != "" && $( "input" )[ 4 ].value != "" && $( "input" )[ 5 ].value != "") {
 	  	Perguntas.push(new Answer());
-	  	//localStorage.setItem('perguntas', JSON.stringify(Perguntas) );
+	  	localStorage.setItem('perguntas', JSON.stringify(Perguntas) );
 		console.log(JSON.stringify(Perguntas))
 	  	$( "input" )[ 0 ].value = "";
 	  	$( "input" )[ 1 ].value = "";
