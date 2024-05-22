@@ -365,47 +365,47 @@ function shuffleArray() {
 function pkm(e) {
 	if (e.keyCode == 27) {
 		$('#content').load("Pokemon.html");
-		var c = Math.floor(Math.random() * 720 + 3);
+		var c = Math.floor(Math.random() * 1104 + 3);
 		$("input")[0].value = $("#content").children()[c].childNodes[1].innerHTML;
 		switch (Math.floor(Math.random() * 5)) {
 			case 0:
 				$("input")[6].checked = true;
 				$("input")[1].value = $("#content").children()[c].nodeName;
-				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				break;
 			case 1:
 				$("input")[7].checked = true;
-				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				$("input")[2].value = $("#content").children()[c].nodeName;
-				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				break;
 			case 2:
 				$("input")[8].checked = true;
-				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				$("input")[3].value = $("#content").children()[c].nodeName;
-				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				break;
 			case 3:
 				$("input")[9].checked = true;
-				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				$("input")[4].value = $("#content").children()[c].nodeName;
-				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[5].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				break;
 			case 4:
 				$("input")[10].checked = true;
-				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
-				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 720 + 3)].nodeName;
+				$("input")[1].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[2].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[3].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
+				$("input")[4].value = $("#content").children()[Math.floor(Math.random() * 1104 + 3)].nodeName;
 				$("input")[5].value = $("#content").children()[c].nodeName;
 				break;
 		}
